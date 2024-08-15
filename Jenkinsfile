@@ -1,20 +1,35 @@
 pipeline {
     agent any
+
     stages {
-        stage('Build') {
+        stage('Checkout') {
             steps {
-                sh 'mvn -B -DskipTests clean package'
+                git 'https://github.com/thaivtkg/eCommerce-App.git'
             }
         }
-        stage('Test') { 
+        stage('Build') {
             steps {
-                sh 'mvn test' 
+                sh './mvn clean install' // Use 'mvn clean install' if using Maven
             }
-            post {
-                always {
-                    junit 'target/surefire-reports/*.xml' 
-                }
+        }
+        stage('Test') {
+            steps {
+                sh './test' // Use 'mvn test' if using Maven
             }
+        }
+        stage('Package') {
+            steps {
+                sh './mvn package' // Use 'mvn package' if using Maven
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Build and Deploy succeeded!'
+        }
+        failure {
+            echo 'Build or Deploy failed!'
         }
     }
 }
