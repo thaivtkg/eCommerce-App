@@ -9,7 +9,7 @@ import com.example.demo.model.persistence.repositories.UserRepository;
 import com.example.demo.model.requests.ModifyCartRequest;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -21,9 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.Assert.assertNull;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -62,7 +60,9 @@ public class CartControllerTest {
         List<Item> items = responseCart.getItems();
         assertNotNull(items);
         assertEquals("thai",responseCart.getUser().getUsername());
-        assertEquals(1L, items.get(0).getId());
+        Item item=items.get(0);
+        assertEquals(1L, item.getId());
+        assertEquals(2, items.size());
 
     }
 
@@ -72,6 +72,56 @@ public class CartControllerTest {
         ResponseEntity<Cart> response = cartController.addTocart(modifyCartRequest);
 
         assertNull(response.getBody());
+        assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
+    }
+
+    @Test
+    public void testAddToCartWithInvalidInput2() {
+        ModifyCartRequest modifyCartRequest = generateModifyCartRequest();
+        when(userRepository.findByUsername(modifyCartRequest.getUsername())).thenReturn(generateTestUser());
+        modifyCartRequest.setItemId(0L);
+        ResponseEntity<Cart> response = cartController.addTocart(modifyCartRequest);
+
+        assertNull(response.getBody());
+        assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
+    }
+
+    @Test
+    public void testRemoveFromCart() {
+        ModifyCartRequest modifyCartRequest = generateModifyCartRequest();
+        when(userRepository.findByUsername(modifyCartRequest.getUsername())).thenReturn(generateTestUser());
+        ResponseEntity<Cart> response = cartController.removeFromcart(modifyCartRequest);
+        Cart responseCart = response.getBody();
+
+
+        assertNotNull(response);
+        assertNotNull(responseCart);
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(0, responseCart.getItems().size());
+        assertEquals("thai", responseCart.getUser().getUsername());
+    }
+
+    @Test
+    public void testRemoveFromCartInvalidUserInput() {
+        ModifyCartRequest modifyCartRequest = generateModifyCartRequest();
+        ResponseEntity<Cart> response = cartController.removeFromcart(modifyCartRequest);
+        Cart responseCart = response.getBody();
+
+
+        assertNull(responseCart);
+        assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
+    }
+
+    @Test
+    public void testRemoveFromCartInvalidItemInput() {
+        ModifyCartRequest modifyCartRequest = generateModifyCartRequest();
+        when(userRepository.findByUsername(modifyCartRequest.getUsername())).thenReturn(generateTestUser());
+        modifyCartRequest.setItemId(0L);
+        ResponseEntity<Cart> response = cartController.removeFromcart(modifyCartRequest);
+        Cart responseCart = response.getBody();
+
+
+        assertNull(responseCart);
         assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
     }
 

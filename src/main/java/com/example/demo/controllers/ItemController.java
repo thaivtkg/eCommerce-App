@@ -19,8 +19,6 @@ public class ItemController {
 	@Autowired
 	private ItemRepository itemRepository;
 
-	public ItemController(ItemRepository repository) {
-	}
 
 	@GetMapping
 	public ResponseEntity<List<Item>> getItems() {

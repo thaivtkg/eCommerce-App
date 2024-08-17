@@ -1,0 +1,107 @@
+2024-08-18T05:59:06.779+0700 INFO Starting SareetaApplication on DESKTOP-MUJJ2M7 with PID 22900 (E:\Udacity\EcommerceApp\starter_code\target\classes started by AD in E:\Udacity\EcommerceApp\starter_code)
+2024-08-18T05:59:06.784+0700 DEBUG Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2024-08-18T05:59:06.785+0700 INFO No active profile set, falling back to default profiles: default
+2024-08-18T05:59:07.900+0700 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-18T05:59:07.909+0700 INFO Starting service [Tomcat]
+2024-08-18T05:59:07.910+0700 INFO Starting Servlet engine: [Apache Tomcat/9.0.19]
+2024-08-18T05:59:08.012+0700 INFO Initializing Spring embedded WebApplicationContext
+2024-08-18T05:59:08.157+0700 INFO HikariPool-1 - Starting...
+2024-08-18T05:59:08.284+0700 INFO HikariPool-1 - Start completed.
+2024-08-18T05:59:08.357+0700 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2024-08-18T05:59:08.412+0700 INFO HHH000412: Hibernate Core {5.3.10.Final}
+2024-08-18T05:59:08.414+0700 INFO HHH000206: hibernate.properties not found
+2024-08-18T05:59:08.520+0700 INFO HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2024-08-18T05:59:08.634+0700 INFO HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-08-18T05:59:09.591+0700 DEBUG Filter 'JWTAuthenticationVerficationFilter' configured for use
+2024-08-18T05:59:10.081+0700 INFO Starting ProtocolHandler ["http-nio-8080"]
+2024-08-18T05:59:10.135+0700 INFO Started SareetaApplication in 3.634 seconds (JVM running for 4.739)
+2024-08-18T05:59:10.136+0700 INFO Ecommerce Application Started
+2024-08-18T06:01:06.784+0700 ERROR Did not find user with username, test.
+2024-08-18T06:01:06.791+0700 ERROR User test Not Created because of invalid password
+2024-08-18T06:01:06.793+0700 INFO Found user with username, test.
+2024-08-18T06:01:06.795+0700 INFO Created user with username, test.
+2024-08-18T06:01:06.798+0700 ERROR User test Not Created because of invalid password
+2024-08-18T06:01:06.799+0700 ERROR User test Not Created because of invalid password
+2024-08-18T06:01:06.815+0700 INFO Setup called
+2024-08-18T06:01:06.816+0700 ERROR No user found can't delete from cart.
+2024-08-18T06:01:06.818+0700 INFO Setup called
+2024-08-18T06:01:06.820+0700 ERROR No items found can't add to cart.
+2024-08-18T06:01:06.821+0700 INFO Setup called
+2024-08-18T06:01:06.826+0700 INFO Setup called
+2024-08-18T06:01:06.829+0700 INFO Add to cart successful.
+2024-08-18T06:01:06.830+0700 INFO Setup called
+2024-08-18T06:01:06.831+0700 ERROR No items found can't delete from cart.
+2024-08-18T06:01:06.832+0700 INFO Setup called
+2024-08-18T06:01:06.833+0700 ERROR No user found can't add to cart. 
+2024-08-18T06:01:06.868+0700 INFO Order submitted
+2024-08-18T06:01:06.888+0700 INFO Found orders for user
+2024-08-18T06:01:06.890+0700 ERROR No user found can't get orders for user
+2024-08-18T06:01:06.892+0700 ERROR No user found can't submit order
+2024-08-18T06:01:36.361+0700 ERROR Did not find user with username, test.
+2024-08-18T06:01:36.367+0700 ERROR User test Not Created because of invalid password
+2024-08-18T06:01:36.368+0700 INFO Found user with username, test.
+2024-08-18T06:01:36.372+0700 INFO Created user with username, test.
+2024-08-18T06:01:36.374+0700 ERROR User test Not Created because of invalid password
+2024-08-18T06:01:36.376+0700 ERROR User test Not Created because of invalid password
+2024-08-18T06:01:36.392+0700 INFO Setup called
+2024-08-18T06:01:36.392+0700 ERROR No user found can't delete from cart.
+2024-08-18T06:01:36.394+0700 INFO Setup called
+2024-08-18T06:01:36.395+0700 ERROR No items found can't add to cart.
+2024-08-18T06:01:36.396+0700 INFO Setup called
+2024-08-18T06:01:36.400+0700 INFO Setup called
+2024-08-18T06:01:36.401+0700 INFO Add to cart successful.
+2024-08-18T06:01:36.402+0700 INFO Setup called
+2024-08-18T06:01:36.403+0700 ERROR No items found can't delete from cart.
+2024-08-18T06:01:36.404+0700 INFO Setup called
+2024-08-18T06:01:36.404+0700 ERROR No user found can't add to cart. 
+2024-08-18T06:01:36.438+0700 INFO Order submitted
+2024-08-18T06:01:36.459+0700 INFO Found orders for user
+2024-08-18T06:01:36.461+0700 ERROR No user found can't get orders for user
+2024-08-18T06:01:36.463+0700 ERROR No user found can't submit order
+2024-08-18T06:01:44.653+0700 ERROR Did not find user with username, test.
+2024-08-18T06:01:44.662+0700 ERROR User test Not Created because of invalid password
+2024-08-18T06:01:44.667+0700 INFO Found user with username, test.
+2024-08-18T06:01:44.673+0700 INFO Created user with username, test.
+2024-08-18T06:01:44.676+0700 ERROR User test Not Created because of invalid password
+2024-08-18T06:01:44.678+0700 ERROR User test Not Created because of invalid password
+2024-08-18T06:01:44.700+0700 INFO Setup called
+2024-08-18T06:01:44.701+0700 ERROR No user found can't delete from cart.
+2024-08-18T06:01:44.702+0700 INFO Setup called
+2024-08-18T06:01:44.704+0700 ERROR No items found can't add to cart.
+2024-08-18T06:01:44.706+0700 INFO Setup called
+2024-08-18T06:01:44.710+0700 INFO Setup called
+2024-08-18T06:01:44.713+0700 INFO Add to cart successful.
+2024-08-18T06:01:44.714+0700 INFO Setup called
+2024-08-18T06:01:44.716+0700 ERROR No items found can't delete from cart.
+2024-08-18T06:01:44.717+0700 INFO Setup called
+2024-08-18T06:01:44.718+0700 ERROR No user found can't add to cart. 
+2024-08-18T06:01:44.764+0700 INFO Order submitted
+2024-08-18T06:01:44.792+0700 INFO Found orders for user
+2024-08-18T06:01:44.795+0700 ERROR No user found can't get orders for user
+2024-08-18T06:01:44.797+0700 ERROR No user found can't submit order
+2024-08-18T06:16:44.179+0700 INFO HikariPool-1 - Shutdown initiated...
+2024-08-18T06:16:44.180+0700 INFO HikariPool-1 - Shutdown completed.
+2024-08-18T06:16:52.863+0700 INFO Starting SareetaApplication on DESKTOP-MUJJ2M7 with PID 24108 (E:\Udacity\EcommerceApp\starter_code\target\classes started by AD in E:\Udacity\EcommerceApp\starter_code)
+2024-08-18T06:16:52.872+0700 DEBUG Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2024-08-18T06:16:52.873+0700 INFO No active profile set, falling back to default profiles: default
+2024-08-18T06:16:54.780+0700 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-18T06:16:54.802+0700 INFO Starting service [Tomcat]
+2024-08-18T06:16:54.804+0700 INFO Starting Servlet engine: [Apache Tomcat/9.0.19]
+2024-08-18T06:16:54.979+0700 INFO Initializing Spring embedded WebApplicationContext
+2024-08-18T06:16:55.217+0700 INFO HikariPool-1 - Starting...
+2024-08-18T06:16:55.454+0700 INFO HikariPool-1 - Start completed.
+2024-08-18T06:16:55.532+0700 INFO HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2024-08-18T06:16:55.642+0700 INFO HHH000412: Hibernate Core {5.3.10.Final}
+2024-08-18T06:16:55.645+0700 INFO HHH000206: hibernate.properties not found
+2024-08-18T06:16:55.816+0700 INFO HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2024-08-18T06:16:56.013+0700 INFO HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-08-18T06:16:57.429+0700 DEBUG Filter 'JWTAuthenticationVerficationFilter' configured for use
+2024-08-18T06:16:58.066+0700 INFO Starting ProtocolHandler ["http-nio-8080"]
+2024-08-18T06:16:58.171+0700 INFO Started SareetaApplication in 5.835 seconds (JVM running for 7.209)
+2024-08-18T06:16:58.173+0700 INFO Ecommerce Application Started
+2024-08-18T06:17:48.834+0700 INFO HikariPool-1 - Shutdown initiated...
+2024-08-18T06:17:48.837+0700 INFO HikariPool-1 - Shutdown completed.

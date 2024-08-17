@@ -1,7 +1,9 @@
 package com.example.demo.controllers;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+
+import org.apache.logging.log4j.Logger;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -22,7 +24,7 @@ import com.example.demo.model.requests.CreateUserRequest;
 @RequestMapping("/api/user")
 public class UserController {
 
-	final Logger logger = LoggerFactory.getLogger(UserController.class);
+	final Logger logger = LogManager.getLogger(UserController.class);
 
 	@Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
@@ -62,10 +64,12 @@ public class UserController {
 		user.setCart(cart);
 		if (createUserRequest.getPassword() == null || createUserRequest.getPassword().length() < 7 ||
 				!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())) {
+			logger.error("User {} Not Created because of invalid password", createUserRequest.getUsername());
 			return ResponseEntity.badRequest().build();
 		}
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
 		userRepository.save(user);
+		logger.info("Created user with username, {}.", user.getUsername());
 		return ResponseEntity.ok(user);
 	}
 	
