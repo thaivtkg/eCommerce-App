@@ -70,7 +70,8 @@
 		<dependency>
 			<groupId>org.junit.vintage</groupId>
 			<artifactId>junit-vintage-engine</artifactId>
-			<version>5.7.0</version>
+			<version>5.8.0-M1</version>
+			<scope>test</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.codehaus.mojo/tomcat-maven-plugin -->
 		<dependency>

@@ -102,3 +102,26 @@
 2024-08-18T06:18:37.698+0700 INFO Found orders for user
 2024-08-18T06:18:37.700+0700 ERROR No user found can't get orders for user
 2024-08-18T06:18:37.701+0700 ERROR No user found can't submit order
+2024-08-18T06:33:01.580+0700 INFO HikariPool-1 - Shutdown initiated...
+2024-08-18T06:33:01.582+0700 INFO HikariPool-1 - Shutdown completed.
+2024-08-18T06:36:31.835+0700 ERROR Did not find user with username, test.
+2024-08-18T06:36:31.851+0700 ERROR User test Not Created because of invalid password
+2024-08-18T06:36:31.854+0700 INFO Found user with username, test.
+2024-08-18T06:36:31.860+0700 INFO Created user with username, test.
+2024-08-18T06:36:31.863+0700 ERROR User test Not Created because of invalid password
+2024-08-18T06:36:31.866+0700 ERROR User test Not Created because of invalid password
+2024-08-18T06:36:31.907+0700 INFO Setup called
+2024-08-18T06:36:31.908+0700 ERROR No user found can't delete from cart.
+2024-08-18T06:36:31.912+0700 INFO Setup called
+2024-08-18T06:36:31.914+0700 ERROR No items found can't add to cart.
+2024-08-18T06:36:31.915+0700 INFO Setup called
+2024-08-18T06:36:31.920+0700 INFO Setup called
+2024-08-18T06:36:31.923+0700 INFO Add to cart successful.
+2024-08-18T06:36:31.925+0700 INFO Setup called
+2024-08-18T06:36:31.927+0700 ERROR No items found can't delete from cart.
+2024-08-18T06:36:31.929+0700 INFO Setup called
+2024-08-18T06:36:31.931+0700 ERROR No user found can't add to cart. 
+2024-08-18T06:36:31.993+0700 INFO Order submitted
+2024-08-18T06:36:32.069+0700 INFO Found orders for user
+2024-08-18T06:36:32.072+0700 ERROR No user found can't get orders for user
+2024-08-18T06:36:32.075+0700 ERROR No user found can't submit order
